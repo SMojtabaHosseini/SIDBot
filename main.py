@@ -37,7 +37,7 @@ async def on_message(message):
     return
 
   if message.content.startswith('!name'):
-    name = message.content.split(' ')[1]
+    name = message.content.split(' ')[1].lower()
     result = resolveNames(name)
     if result["code"] == 0:
       if result["address"] == zeroAddress:
